@@ -1,0 +1,18 @@
+{ "description": "Reconstruct dwis using Dipy, then convert to mrtrix and dsi studio formats",
+  "space": "T1w",
+  "name": "dipy_dti",
+  "atlases": [ ],
+  "nodes": [
+    {
+      "name": "dti_recon",
+      "software": "Dipy",
+      "action": "DTI_reconstruction",
+      "input": "qsiprep",
+      "output_suffix": "DTI",
+      "parameters": {
+        "write_mif": true,
+        "write_fibgz": true
+      }
+    }
+  ]
+}

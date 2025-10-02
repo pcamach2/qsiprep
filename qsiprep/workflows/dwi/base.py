@@ -426,7 +426,7 @@ Diffusion data preprocessing
             ('subjects_dir', 'inputnode.subjects_dir'),
             ('subject_id', 'inputnode.subject_id'),
         ]),
-        (hmc_wf, b0_coreg_wf, [('outputnode.b0_template', 'inputnode.ref_b0_brain')]),
+        (hmc_wf, b0_coreg_wf, [('outputnode.final_template_brain', 'inputnode.ref_b0_brain')]),
         (hmc_wf, summary, [('outputnode.sdc_method', 'distortion_correction')]),
         (b0_coreg_wf, ds_report_coreg, [('outputnode.report', 'in_file')]),
         (b0_coreg_wf, outputnode, [
